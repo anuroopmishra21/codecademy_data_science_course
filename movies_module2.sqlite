@@ -1,0 +1,2 @@
+#accessing all the columns in the table movies
+SELECT * FROM movies;
