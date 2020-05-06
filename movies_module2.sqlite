@@ -42,3 +42,12 @@ SELECT name, year , imdb_rating FROM movies ORDER BY imdb_rating DESC;
 
 #LIMIT to give limited number of rows in the result
 SELECT * FROM movies ORDER BY imdb_rating DESC LIMIT 3;
+
+#using CASE to generate a seperate column for Mood
+SELECT name,
+CASE
+  WHEN genre='romance' THEN 'Chill'
+  WHEN genre='comedy' THEN 'Chill'
+  ELSE 'Intense'
+END AS 'Mood'
+FROM movies;
