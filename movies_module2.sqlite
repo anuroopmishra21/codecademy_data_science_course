@@ -21,3 +21,6 @@ SELECT * FROM movies WHERE name LIKE 'The %';
 
 #accessing all the movie names which have NULL value in imdb_rating column
 SELECT name FROM movies WHERE imdb_rating IS NULL;
+
+#using BETWEEN to get information of all the movies with name starting with 'D','E' and 'F'
+SELECT * FROM movies WHERE name BETWEEN 'D' and 'G';
