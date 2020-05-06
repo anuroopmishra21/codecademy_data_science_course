@@ -1,0 +1,8 @@
+#Order the table by title (from A-Z)
+SELECT title,publisher FROM news ORDER BY title;
+
+#Which article names have the word 'bitcoin' in it
+SELECT * FROM news WHERE title LIKE '%bitcoin%';
+
+#What are the 20 business articles published most recently
+SELECT * FROM news WHERE category='b' ORDER BY timestamp DESC LIMIT 20;
