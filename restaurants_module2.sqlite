@@ -1,0 +1,8 @@
+#Return all the restaurants that are Japanese and $$
+SELECT * FROM nomnom WHERE cuisine='Japanese' AND price='$$'; 
+
+#all the restaurants with the word 'noodle' in name
+SELECT * FROM nomnom WHERE name LIKE '%noodle%';
+ 
+#Find the restaurants that have empty health values.
+SELECT * FROM nomnom  WHERE health IS NULL;
