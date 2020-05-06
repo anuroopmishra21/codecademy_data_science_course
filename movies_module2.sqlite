@@ -1,2 +1,6 @@
 #accessing all the columns in the table movies
 SELECT * FROM movies;
+
+#accessing only 2 rows name and genre
+SELECT name,genre FROM movies;
+
