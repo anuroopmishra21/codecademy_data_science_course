@@ -4,5 +4,8 @@ SELECT * FROM movies;
 #accessing only 2 rows name and genre
 SELECT name,genre FROM movies;
 
+#using LIKE with a missing character
+SELECT * FROM movies WHERE name LIKE 'Se_en';
+
 #using LIKE with '%' wildcard
 SELECT * FROM movies WHERE name LIKE 'The %';
