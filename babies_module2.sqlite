@@ -1,0 +1,8 @@
+# the number of girls that were named Lillian in the full time span of the table
+SELECT year,number FROM babies WHERE name='Lillian' AND gender='F';
+
+#Find 20 distinct names that start with ‘S’.
+SELECT name FROM babies WHERE name LIKE 'S%' LIMIT 20;
+
+#What are the top 10 names in 1880?
+SELECT name,gender,number FROM babies WHERE year=1880 ORDER BY number DESC LIMIT 10;
