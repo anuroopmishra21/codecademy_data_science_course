@@ -4,6 +4,12 @@ SELECT * FROM movies;
 #accessing only 2 rows name and genre
 SELECT name,genre FROM movies;
 
+#using the keyword DISTINCT to get the unique values
+SELECT DISTINCT genre FROM movies;
+
+#using the keyword WHERE to filter the results
+SELECT * FROM movies WHERE year>2014;
+
 #using LIKE with a missing character
 SELECT * FROM movies WHERE name LIKE 'Se_en';
 
