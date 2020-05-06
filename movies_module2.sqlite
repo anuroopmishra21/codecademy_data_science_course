@@ -4,6 +4,9 @@ SELECT * FROM movies;
 #accessing only 2 rows name and genre
 SELECT name,genre FROM movies;
 
+#using AS to rename the column while showing the result of a query
+SELECT name AS 'Titles' FROM movies;
+
 #using the keyword DISTINCT to get the unique values
 SELECT DISTINCT genre FROM movies;
 
