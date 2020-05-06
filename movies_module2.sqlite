@@ -4,3 +4,5 @@ SELECT * FROM movies;
 #accessing only 2 rows name and genre
 SELECT name,genre FROM movies;
 
+#using LIKE with '%' wildcard
+SELECT * FROM movies WHERE name LIKE 'The %';
