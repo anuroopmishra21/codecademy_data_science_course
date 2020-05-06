@@ -30,3 +30,15 @@ SELECT * FROM movies WHERE year BETWEEN 1970 AND 1979;
 
 #using AND to give multiple conditions
 SELECT * FROM movies WHERE genre='horror' AND year<1985;
+
+#using OR to satisfy one of the multiple conditions
+SELECT * FROM movies WHERE year>2014 OR genre='action';
+
+#using ORDER BY to give sorted result of the query from lowest to highest rating
+SELECT name, year , imdb_rating FROM movies ORDER BY imdb_rating;
+
+#using ORDER BY to give sorted result of the query from highest to lowest rating
+SELECT name, year , imdb_rating FROM movies ORDER BY imdb_rating DESC;
+
+#LIMIT to give limited number of rows in the result
+SELECT * FROM movies ORDER BY imdb_rating DESC LIMIT 3;
