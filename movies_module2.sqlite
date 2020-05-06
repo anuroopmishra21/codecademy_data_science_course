@@ -18,3 +18,6 @@ SELECT * FROM movies WHERE name LIKE 'Se_en';
 
 #using LIKE with '%' wildcard
 SELECT * FROM movies WHERE name LIKE 'The %';
+
+#accessing all the movie names which have NULL value in imdb_rating column
+SELECT name FROM movies WHERE imdb_rating IS NULL;
