@@ -1,0 +1,11 @@
+#using COUNT
+SELECT COUNT(*) FROM fake_apps;
+
+#using SUM
+SELECT SUM(downloads) FROM fake_apps;
+
+#using AVG
+SELECT AVG(downloads) FROM fake_apps;
+
+#using MIN and MAX
+SELECT name,MAX(price) FROM fake_apps;
