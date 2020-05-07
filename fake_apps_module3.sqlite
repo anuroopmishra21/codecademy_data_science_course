@@ -9,3 +9,14 @@ SELECT AVG(downloads) FROM fake_apps;
 
 #using MIN and MAX
 SELECT name,MAX(price) FROM fake_apps;
+
+#using ROUND
+SELECT name,ROUND(price,0) FROM fake_apps;
+SELECT name, ROUND(AVG(price),2) FROM fake_apps;
+
+#using GROUP BY with columns
+SELECT SUM(downloads) FROM fake_apps GROUP BY price;
+SELECT AVG(price) FROM fake_apps WHERE downloads>20000 GROUP BY category;
+
+#using GROUP BY with column reference numbers
+SELECT price,SUM(downloads) FROM fake_apps GROUP BY 1;
