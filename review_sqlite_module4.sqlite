@@ -1,0 +1,141 @@
+#ALTER TABLE
+ALTER TABLE table_name 
+ADD column_name datatype;
+
+#AND
+SELECT column_name(s)
+FROM table_name
+WHERE column_1 = value_1
+  AND column_2 = value_2;
+
+#AS
+SELECT column_name AS 'Alias'
+FROM table_name;
+
+#AVG()
+SELECT AVG(column_name)
+FROM table_name;
+
+#BETWEEN
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value_1 AND value_2;
+
+#CASE
+SELECT column_name,
+  CASE
+    WHEN condition THEN 'Result_1'
+    WHEN condition THEN 'Result_2'
+    ELSE 'Result_3'
+  END
+FROM table_name;
+
+#COUNT()
+SELECT COUNT(column_name)
+FROM table_name;
+
+#CREATE TABLE
+CREATE TABLE table_name (
+  column_1 datatype, 
+  column_2 datatype, 
+  column_3 datatype
+);
+
+#DELETE
+DELETE FROM table_name
+WHERE some_column = some_value;
+
+#GROUP BY
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name;
+
+#HAVING
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name
+HAVING COUNT(*) > value;
+
+#INNER JOIN
+SELECT column_name(s)
+FROM table_1
+JOIN table_2
+  ON table_1.column_name = table_2.column_name;
+
+#INSERT
+INSERT INTO table_name (column_1, column_2, column_3) 
+VALUES (value_1, 'value_2', value_3);
+
+#IS NULL / IS NOT NULL
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NULL;
+
+#LIKE
+SELECT column_name(s)
+FROM table_name
+WHERE column_name LIKE pattern;
+
+#LIMIT
+SELECT column_name(s)
+FROM table_name
+LIMIT number;
+
+#MAX()
+SELECT MAX(column_name)
+FROM table_name;
+
+#MIN()
+SELECT MIN(column_name)
+FROM table_name;
+
+#OR
+SELECT column_name
+FROM table_name
+WHERE column_name = value_1
+   OR column_name = value_2;
+
+#ORDER BY
+SELECT column_name
+FROM table_name
+ORDER BY column_name ASC | DESC;
+
+#OUTER JOIN
+SELECT column_name(s)
+FROM table_1
+LEFT JOIN table_2
+  ON table_1.column_name = table_2.column_name;
+
+#ROUND()
+SELECT ROUND(column_name, integer)
+FROM table_name;
+
+#SELECT
+SELECT column_name 
+FROM table_name;
+
+#SELECT DISTINCT
+SELECT DISTINCT column_name
+FROM table_name;
+
+#SUM
+SELECT SUM(column_name)
+FROM table_name;
+
+#UPDATE
+UPDATE table_name
+SET some_column = some_value
+WHERE some_column = some_value;
+
+#WHERE
+SELECT column_name(s)
+FROM table_name
+WHERE column_name operator value;
+
+#WITH
+WITH temporary_name AS (
+   SELECT *
+   FROM table_name)
+SELECT *
+FROM temporary_name
+WHERE column_name operator value;
