@@ -54,3 +54,16 @@ def get_boundaries(target,margin):
   return low_limit,high_limit
 low,high=get_boundaries(100,20)
 print('I am '+str(my_age)+' years old and my dad is '+str(dads_age)+' years old')
+
+current_year=2048
+def calculate_age(birth_year):
+  age = current_year - birth_year
+  return age
+print(current_year)
+print(calculate_age(1970))
+
+def repeat_stuff(stuff,num_repeats=10):
+  return stuff*num_repeats
+lyrics=repeat_stuff("Row ",3)+"Your Boat. "
+song=repeat_stuff(lyrics)
+print(song)
