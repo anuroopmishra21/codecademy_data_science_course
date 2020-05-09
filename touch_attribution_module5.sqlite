@@ -1,9 +1,0 @@
- SELECT * FROM page_visits LIMIT 10;
- 
- SELECT * FROM page_visits WHERE user_id=10069 AND utm_source='buzzfeed';
- 
- SELECT * FROM page_visits WHERE user_id=10069;
- 
- SELECT * FROM page_visits WHERE user_id=10329;
- 
- SELECT user_id,MAX(timestamp) AS 'last_touch_at' FROM page_visits GROUP BY 1;
