@@ -26,3 +26,40 @@ for breed in dog_breeds_available_for_adoption:
   if breed == dog_breed_I_want:
     print('They have the dog I want!')
     break
+
+ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
+for i in ages:
+  if i<21:
+    continue
+  print(i)
+  
+all_students = ["Alex", "Briana", "Cheri", "Daniele", "Dora", "Minerva", "Alexa", "Obie", "Arius", "Loki"]
+students_in_poetry = []
+while len(students_in_poetry) < 6:
+  students_in_poetry.append(all_students.pop())
+print(students_in_poetry)
+
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+scoops_sold=0
+for location in sales_data:
+  print(location)
+  for scoops in location:
+    scoops_sold+=scoops
+print(scoops_sold)
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+can_ride_coaster = [height for height in heights if height > 161]
+print(can_ride_coaster)
+
+celsius = [0, 10, 15, 32, -5, 27, 3]
+fahrenheit = [c*(9/5)+32 for c in celsius]
+print(fahrenheit)
+
+single_digits = range(10)
+squares = []
+for i in single_digits:
+  print(i)
+  squares.append(i**2)
+print(squares)
+cubes = [i**3 for i in single_digits]
+print(cubes)
