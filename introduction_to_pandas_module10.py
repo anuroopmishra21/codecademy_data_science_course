@@ -19,3 +19,122 @@ df2 = pd.DataFrame([
     'Store ID','Location','Number of Employees'
   ])
 print(df2)
+
+import codecademylib
+import pandas as pd
+df = pd.read_csv('sample.csv')
+print(df)
+
+import codecademylib
+import pandas as pd
+df = pd.read_csv('imdb.csv')
+print(df.head())
+print(df.info())
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west']
+)
+clinic_north = df['clinic_north']
+print(type(clinic_north))
+print(type(df))
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west']
+)
+clinic_north_south = df[['clinic_north','clinic_south']]
+print(type(clinic_north_south))
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west'])
+march = df.iloc[2]
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west']
+)
+april_may_june = df.iloc[-3:]
+print(april_may_june)
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west'])
+january = df[df.month == 'January']
+print(january)
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west'])
+march_april = df[(df.month == 'March') | (df.month == 'April')]
+print(march_april)
+
+import codecademylib
+import pandas as pd
+df = pd.DataFrame([
+  ['January', 100, 100, 23, 100],
+  ['February', 51, 45, 145, 45],
+  ['March', 81, 96, 65, 96],
+  ['April', 80, 80, 54, 180],
+  ['May', 51, 54, 54, 154],
+  ['June', 112, 109, 79, 129]],
+  columns=['month', 'clinic_east',
+           'clinic_north', 'clinic_south',
+           'clinic_west'])
+january_february_march = df[df.month.isin(['January','February','March'])]
+print(january_february_march)
