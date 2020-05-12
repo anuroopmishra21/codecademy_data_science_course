@@ -1,1 +1,1 @@
-This is repository for the codes for DATA SCIENCE from CODECADEMY 
+Codes for Data Science Career Path from Codecademy-pro
