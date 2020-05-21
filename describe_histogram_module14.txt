@@ -1,0 +1,6 @@
+This histogram displays the distribution of chest pain cost for over 2,000 hospitals across the United States.
+The average and median costs are $16,948 and $14,659.6, respectively. Given that the data is unimodal,
+with one local maximum and a right skew, the fact that the average is greater than the median, matches our expectation.
+
+The range of costs is very large, $78,623, with the smallest cost equal to $2,459 and the largest cost equal to $81,083.
+There is one hospital, Bayonne Hospital Center, that charges far more than the rest at $81,083.
