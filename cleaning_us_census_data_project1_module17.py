@@ -1,0 +1,41 @@
+import pandas as pd
+import numpy as np
+import glob
+import matplotlib.pyplot as plt
+import codecademylib3_seaborn
+states = glob.glob('state*.csv')
+us_census_list=[]
+for state in states:
+  data=pd.read_csv(state)
+  us_census_list.append(data)
+us_census = pd.concat(us_census_list)
+print(us_census.columns)
+print(us_census.dtypes)
+print(us_census.head())
+us_census['Income']=us_census['Income'].replace('\$','',regex=True)
+us_census['Income']=pd.to_numeric(us_census['Income'])
+split_gender = us_census['GenderPop'].str.split('_')
+us_census['Male']=split_gender.str.get(0)
+us_census['Female']=split_gender.str.get(1)
+us_census['Male']=us_census['Male'].replace('M','',regex=True)
+us_census['Female']=us_census['Female'].replace('F','',regex=True)
+us_census['Male']=pd.to_numeric(us_census['Male'])
+us_census['Female']=pd.to_numeric(us_census['Female'])
+us_census=us_census.fillna({'Female':us_census['TotalPop']-us_census['Male']})
+us_census=us_census.drop_duplicates()
+plt.scatter(us_census['Female'],us_census['Income'])
+plt.show()
+plt.close('all')
+us_census['Hispanic']=pd.to_numeric(us_census['Hispanic'].replace('%','',regex=True))
+us_census['White']=pd.to_numeric(us_census['White'].replace('%','',regex=True))
+us_census['Black']=pd.to_numeric(us_census['Black'].replace('%','',regex=True))
+us_census['Native']=pd.to_numeric(us_census['Native'].replace('%','',regex=True))
+us_census['Asian']=pd.to_numeric(us_census['Asian'].replace('%','',regex=True))
+us_census['Pacific']=pd.to_numeric(us_census['Pacific'].replace('%','',regex=True))
+plt.hist(us_census['Hispanic'],range=(0,100),label='Hispanic')
+plt.hist(us_census['White'],range=(0,100),label='White')
+plt.hist(us_census['Black'],range=(0,100),label='Black')
+plt.hist(us_census['Native'],range=(0,100),label='Native')
+plt.hist(us_census['Asian'],range=(0,100),label='Asian')
+plt.hist(us_census['Pacific'],range=(0,100),label='Pacific')
+plt.show()
