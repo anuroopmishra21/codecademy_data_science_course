@@ -1,0 +1,10 @@
+[cbh]at
+cat|bat
+.....\.
+\d\s\w\w\w\w\w
+[a-d]unt
+(puppies|kitty cats) are my favorite!
+sque\w{3,5}k
+ducks?
+\d ducks? are adoption\?
+hoo+t
