@@ -45,3 +45,25 @@ def log_odds(features, coefficients, intercept):
 # Calculate the log-odds for the Codecademy University data here
 calculated_log_odds = log_odds(hours_studied, calculated_coefficients, intercept)
 print(calculated_log_odds)
+
+import codecademylib3_seaborn
+import numpy as np
+from exam import calculated_log_odds
+def sigmoid(z):
+  denominator = 1 + np.exp(-z)
+  return 1/denominator
+probabilities  = sigmoid(calculated_log_odds)
+print(probabilities)
+
+import numpy as np
+from exam import passed_exam, probabilities, probabilities_2
+def log_loss(probabilities,actual_class):
+  return np.sum(-(1/actual_class.shape[0])*(actual_class*np.log(probabilities) + (1-actual_class)*np.log(1-probabilities)))
+# Print passed_exam here
+print(passed_exam)
+# Calculate and print loss_1 here
+loss_1 = log_loss(probabilities,passed_exam)
+print(loss_1)
+# Calculate and print loss_2 here
+loss_2 = log_loss(probabilities_2,passed_exam)
+print(loss_2)
