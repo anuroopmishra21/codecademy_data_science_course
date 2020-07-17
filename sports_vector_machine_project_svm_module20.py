@@ -14,5 +14,7 @@ def svc(player):
   classifier.fit(training_set[['plate_x','plate_z']],training_set['type'])
   draw_boundary(ax,classifier)
   print(classifier.score(validation_set[['plate_x','plate_z']],validation_set['type']))
+  ax.set_ylim(-2,6)
+  ax.set_xlim(-3,3)
   plt.show()
 svc(jose_altuve)
