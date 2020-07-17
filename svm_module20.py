@@ -48,3 +48,7 @@ y_vals = intercept_two + slope_two * x_vals
 plt.plot(x_vals, y_vals, '-')
 plt.tight_layout()
 plt.show()
+
+red_support_vector = [1,6]
+blue_support_vector_one = [0.5, 2]
+blue_support_vector_two = [2.5, 2]
