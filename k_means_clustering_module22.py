@@ -207,3 +207,14 @@ plt.scatter(centroids[:, 0], centroids[:, 1], marker='D', s=150)
 plt.xlabel('sepal length (cm)')
 plt.ylabel('sepal width (cm)')
 plt.show()
+
+import codecademylib3_seaborn
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.cluster import KMeans
+iris = datasets.load_iris()
+samples = iris.data
+model = KMeans(n_clusters = 3)
+model.fit(samples)
+labels = model.predict(samples)
+print(labels)
