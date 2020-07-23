@@ -233,3 +233,20 @@ new_samples = np.array([[5.7, 4.4, 1.5, 0.4],
    [5.8, 2.7, 5.1, 1.9]])
 print(new_samples)
 print(model.predict(new_samples))
+
+import codecademylib3_seaborn
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.cluster import KMeans
+iris = datasets.load_iris()
+samples = iris.data
+model = KMeans(n_clusters=3)
+model.fit(samples)
+labels = model.predict(samples)
+print(labels)
+x = samples[:,0]
+y = samples[:,1]
+plt.scatter(x, y, c = labels, alpha = 0.5)
+plt.xlabel("Sepal Length in cm")
+plt.ylabel("Sepal width in cm")
+plt.show()
