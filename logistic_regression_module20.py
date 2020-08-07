@@ -7,7 +7,7 @@ plt.ylabel('passed/failed')
 plt.xlabel('hours studied')
 plt.show()
 
-mport codecademylib3_seaborn
+import codecademylib3_seaborn
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
