@@ -87,6 +87,6 @@ class Perceptron:
       if total_error == 0:
         foundLine = True
     print(self.weights)
-cool_perceptron = Perceptron()
+basic_perceptron = Perceptron()
 small_training_set = {(0,3):1, (3,0):-1, (0,-3):-1, (-3,0):1}
-cool_perceptron.training(small_training_set)
+basic_perceptron.training(small_training_set)
