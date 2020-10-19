@@ -1,3 +1,4 @@
+# this an ML project for handwriting recognition
 from goldman_emma_raw import goldman_docs
 from henson_matthew_raw import henson_docs
 from wu_tingfang_raw import wu_docs
